@@ -28,9 +28,24 @@ Read first: `docs/vision.md`, `docs/styleguide.md`. Decisions: `docs/adr/`.
    ```
 
 5. An issue is closed only when its "Done when" holds. If it can't hold yet, leave it open and
-   say what it waits on.
+   say what it waits on. A step that waits on someone outside the lane (a reviewer, a host)
+   holds when they confirm, not when we send: sending a preview link doesn't close its issue.
+
+## What every issue carries
+
+Agreed with the human on the morning-digest plan (2026-11-02). `plan-to-issues` uses this, so
+it doesn't need to ask again.
+
+- First line: `Source: plan.md § <n>` (the plan section it comes from; two issues may share one).
+- Label: `plan:<plan>` from the plan's frontmatter, e.g. `plan:morning-digest`. Create it once.
+- Sections, in this order: `## Scope`, `## Done when` (checkable, from the plan), `## Blocked by`
+  (real issue numbers, `—` if none; say when a blocker is only needed to check "Done when", not
+  to start).
 
 ## Skills
+
+- `plan-to-issues`: plan.md → reviewed split → GitHub issues.
+- `publish-preview`: a saved page on a public GitHub Pages link, and the clean re-upload.
 
 Shared skills live in `.agents/skills/`, one folder each, `SKILL.md` inside. That folder is the
 one source for every harness on the team. If yours loads skills from somewhere else, point it

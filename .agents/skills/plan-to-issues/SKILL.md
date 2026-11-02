@@ -15,7 +15,8 @@ in a shell this agent can run.
    One issue per unit of work.
 3. **Stop and show the table to the human.** Publish nothing until they approve it.
 4. Ask the human what every issue here must carry (fields, labels, wording), unless it is
-   already written down in this session or in the repo.
+   already written down in this session or in the repo. It is: "What every issue carries" in
+   AGENTS.md. Ask only if the human wants something on top of it, then write that there too.
 5. Create each issue in dependency order, so blocked-by can cite real numbers:
 
    ```sh
